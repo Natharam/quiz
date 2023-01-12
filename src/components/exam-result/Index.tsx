@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AppContext } from '../../contest/AppContext';
 import { AnsweredQuestion } from '../../types/question.types';
 
 const ExamResult = ({
@@ -8,7 +7,7 @@ const ExamResult = ({
   setAnsweredQuestion
 }: {
   answeredQuestion: AnsweredQuestion[];
-  setAnsweredQuestion: any;
+  setAnsweredQuestion: (answeredQuestion: AnsweredQuestion[]) => void;
 }) => {
   const navigate = useNavigate();
 

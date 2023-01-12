@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../../contest/AppContext';
 import { AnsweredQuestion, UpdateAnswers } from '../../types/question.types';
 import SingleQuestion from '../SingleQuestion/Index';
 import './styles.css';
 
-const Questions = ({ updateAnswers, answeredQuestion }: { updateAnswers: UpdateAnswers; answeredQuestion: any }) => {
+const Questions = ({ updateAnswers, answeredQuestion }: { updateAnswers: UpdateAnswers; answeredQuestion: AnsweredQuestion[] }) => {
   const questions = useContext(AppContext);
   const navigate = useNavigate();
 
